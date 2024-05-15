@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Poppins;
+    src: url('fonts/Poppins/Poppins-Regular.ttf'), url('fonts/Poppins/Poppins-Bold.ttf'),
+         url('fonts/Poppins/Poppins-Light.ttf');
+}
+@font-face {
+    font-family: "Harlow Solid Italic";
+    src: url('fonts/Harlow-Solid/Harlow-Solid-Italic_22105.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+}
+
+h1 {
+    font-family: "Harlow Solid Italic", serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #99FEEC;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow: -3px 3px #37889A;
+}
+
+body {
+    height: 100%;
+    background: #0A2435 url('stars.png') repeat top center;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    font-family: Poppins, serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #FDBB97;
+}
+
+.imagen-del-dia, .seccion-imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.imagen-del-dia h1 {
+
+    margin-bottom: 20px;
+}
+
+.imagen, .buscador-imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#nasa-image img:first-child {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#nasa-image-title h2:first-child {
+    font-family: Poppins, serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5555;
+    margin-top: 10px;
+}
+
+#nasa-image-date p:first-child {
+    font-family: Poppins, serif;
+    font-size: 1.2rem;
+    color: #FDBB97;
+    margin-top: 10px;
+}
+
+#nasa-image-explanation p:first-child {
+    font-family: Poppins, serif;
+    font-size: 1rem;
+    color: #FDBB97;
+    margin-top: 10px;
+    padding: 0 2rem;
+}
+
+.buscador-imagenes h3 {
+    font-family: Poppins, serif;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF5555;
+    margin-top: 10px;
+}
+.buscador-imagenes p {
+font-family: Poppins, serif;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #FDBB97;
+    margin-top: 10px;
+}
+
+.buscador-imagenes input {
+    font-family: Poppins, serif;
+    font-size: 1.1rem;
+    color: #22465D;
+    background-color: #FDBB97;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.buscador-imagenes button {
+    font-family: Poppins, serif;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: #22465D;
+    background-color: #FF5555;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.mostrar-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.img-container {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+
+#loading {
+    width: 2rem;
+    height: 2rem;
+    border: 5px solid #FDBB97;
+    border-top: 6px solid #FF5555;
+    border-radius: 100%;
+    margin: auto;
+    visibility: hidden;
+    animation: spin 1s infinite linear;
+}
+
+#loading.display {
+    visibility: visible;        
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.div-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.div-info p {
+    text-align: center;
+    width: 60%;
+    font-family: Poppins, serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #FF5555;
+    margin-top: 50px;
+    padding: 0 2rem;
+}
+
+.iconos {
+    justify-content: center;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.icon-img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.cohete {
+    height: 250px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        width: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .img-container {
+        width: calc(100% - 10px);
+    }
+}
